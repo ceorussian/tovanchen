@@ -1,5 +1,5 @@
 <template>
-    <div>
-        123123 admin
-    </div>
-</template>
+  <div>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+
+  </div>

@@ -1,14 +1,12 @@
 
 require('./bootstrap');
 import VueRouter from 'vue-router';
-
 window.Vue = require('vue');
 window.Vue.use(VueRouter);
 
-import HomeAdmin from './components/HomeAdmin';
-const routes = [
-    { path: '/', component: HomeAdmin, name: 'HomeAdmin' },
-]
+
+import {routes} from './router';
+
 const router = new VueRouter({ 
     mode: 'history',
     routes: routes

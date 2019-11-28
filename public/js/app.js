@@ -37221,9 +37221,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    123123 admin\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "button" } },
+        [_vm._v("Primary")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -52271,21 +52284,16 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _components_HomeAdmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HomeAdmin */ "./resources/js/components/HomeAdmin.vue");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-var routes = [{
-  path: '/',
-  component: _components_HomeAdmin__WEBPACK_IMPORTED_MODULE_1__["default"],
-  name: 'HomeAdmin'
-}];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   mode: 'history',
-  routes: routes
+  routes: _router__WEBPACK_IMPORTED_MODULE_1__["routes"]
 });
 var app = new Vue({
   router: router
@@ -52388,6 +52396,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeAdmin_vue_vue_type_template_id_afd4b856___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/router.js":
+/*!********************************!*\
+  !*** ./resources/js/router.js ***!
+  \********************************/
+/*! exports provided: routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
+/* harmony import */ var _components_HomeAdmin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/HomeAdmin */ "./resources/js/components/HomeAdmin.vue");
+
+var routes = [{
+  path: '/',
+  component: _components_HomeAdmin__WEBPACK_IMPORTED_MODULE_0__["default"],
+  name: 'HomeAdmin'
+}];
 
 /***/ }),
 
