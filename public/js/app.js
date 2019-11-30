@@ -55368,7 +55368,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _components_Dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Dashboard */ "./resources/js/components/Dashboard.vue");
-/* harmony import */ var _components_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/admin/HomeAdmin */ "./resources/js/components/admin/HomeAdmin.vue");
+/* harmony import */ var _components_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/admin/HomeAdmin */ "./resources/js/components/admin/HomeAdmin.vue");
 /* harmony import */ var _components_admin_users_Users__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/admin/users/Users */ "./resources/js/components/admin/users/Users.vue");
 
 
@@ -55382,7 +55382,7 @@ var routes = [{
   },
   children: [{
     path: 'admin',
-    component: _components_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _components_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_1__["default"],
     name: 'HomeAdmin'
   }, {
     path: 'users',
@@ -55405,7 +55405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _modules_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/user */ "./resources/js/store/modules/user.js");
+/* harmony import */ var _modules_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/user */ "./resources/js/store/modules/user.js");
 
 
 
@@ -55421,7 +55421,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
     }
   },
   modules: {
-    user: _modules_user__WEBPACK_IMPORTED_MODULE_3__["default"]
+    user: _modules_user__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (store);

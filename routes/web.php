@@ -18,3 +18,4 @@ Route::group(['middleware' => 'checkLogin'], function () {
 Route::get('login', 'AuthController@getLogin')->name('login');
 Route::post('login', 'AuthController@postLogin');
 Route::get('get-me', 'AuthController@getMe');
+Route::get('/{vue_capture?}', function () { return view('layouts.app'); })->where('vue_capture', '[\/\w\.-]*');
