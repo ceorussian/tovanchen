@@ -8,7 +8,10 @@ class UserProfile extends Model
 {
     protected $table = 'user_profiles';
 
-
+    public function user(){
+        return $this->belongsTo(USer::class);
+    }
+    
     public static function updateUser($requests, $id){
         $user = self::where('user_id', $id)->first();
         $user->first_name = $requests['first_name'] ;
@@ -17,4 +20,6 @@ class UserProfile extends Model
         $user->save();
         return $user;
     }
+
+
 }

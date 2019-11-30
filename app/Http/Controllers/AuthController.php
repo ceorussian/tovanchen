@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 class AuthController extends Controller
 {
     public function getLogin(){
@@ -23,5 +24,16 @@ class AuthController extends Controller
         } else {
             return redirect()->route('login');
         }
+    }
+
+    public function getMe(){
+        $auth = Auth::user();
+        $user = User::getUser($auth->id);
+        if(!empty($user)){
+            return response()->json(['messages' => 'success', 'data' => $user], 200);
+        }else{
+            return response()->json(['messages' => 'Vui lòng đăng nhập'], 403);
+        }
+        
     }
 }

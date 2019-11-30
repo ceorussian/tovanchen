@@ -17,3 +17,4 @@ Route::group(['middleware' => 'checkLogin'], function () {
 
 Route::get('login', 'AuthController@getLogin')->name('login');
 Route::post('login', 'AuthController@postLogin');
+Route::get('get-me', 'AuthController@getMe');

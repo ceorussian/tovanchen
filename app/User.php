@@ -18,12 +18,15 @@ class User extends Authenticatable
     protected $table = 'users';
     protected $fillable = ['email', 'password'];
 
+    public function user_profile(){
+        return $this->hasOne(UserProfile::class);
+    }
     public static function getAll(){
-        return self::orderBy('id', 'desc')->paginate(10);
+        return self::with('user_profile')->orderBy('id', 'desc')->paginate(10);
     }
 
     public static function getUser($id){
-        return self::find($id);
+        return self::with('user_profile')->where('id', $id)->first();
     }
 
     public static function createUser($requests){

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\UserProfile;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     protected $user, $user_profile;
@@ -18,7 +19,6 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->user::getAll();
-
         return response()->json($users, 200);
     }
 
