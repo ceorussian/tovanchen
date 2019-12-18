@@ -22,7 +22,7 @@
                         @click="logout"
                         class="nav-link"
                         data-toggle="dropdown"
-                        href="#"
+                        href="javascript:void(0)"
                     >
                         <i class="fas fa-sign-out-alt"></i>
                     </a>

@@ -39306,7 +39306,10 @@ var render = function() {
               "a",
               {
                 staticClass: "nav-link",
-                attrs: { "data-toggle": "dropdown", href: "#" },
+                attrs: {
+                  "data-toggle": "dropdown",
+                  href: "javascript:void(0)"
+                },
                 on: { click: _vm.logout }
               },
               [_c("i", { staticClass: "fas fa-sign-out-alt" })]
