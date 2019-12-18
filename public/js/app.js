@@ -2023,7 +2023,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         name: this.name,
         is_active: this.is_active,
         status: this.status,
-        user_id: this.auth.id
+        user_id: this.auth.id,
+        email: this.auth.email
       };
       this.createNewRoomRequest(data);
     }
@@ -38937,7 +38938,9 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(room.user.email))]),
+            _c("td", [
+              _vm._v(_vm._s(room.user ? room.user.email : room.email))
+            ]),
             _vm._v(" "),
             _c("td", [
               room.is_active == 1
@@ -56630,7 +56633,7 @@ var mutations = {
     var room = state.rooms.find(function (x) {
       return x.id == data.id;
     });
-    room.status = data.status; // (state.rooms || []).push(data.data);
+    room.status = data.status;
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

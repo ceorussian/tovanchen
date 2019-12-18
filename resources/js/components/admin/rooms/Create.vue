@@ -99,7 +99,8 @@ export default {
                 name: this.name,
                 is_active: this.is_active,
                 status: this.status,
-                user_id: this.auth.id
+                user_id: this.auth.id,
+                email: this.auth.email
             };
             this.createNewRoomRequest(data);
         }

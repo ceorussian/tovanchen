@@ -28,7 +28,6 @@ const mutations = {
   updateStatus(state, data) {
     let room = state.rooms.find(x => x.id == data.id);
     room.status = data.status
-    // (state.rooms || []).push(data.data);
   },
 };
 
