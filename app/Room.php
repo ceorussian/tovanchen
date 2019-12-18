@@ -25,7 +25,6 @@ class Room extends Model
         $room->status = $requests['status'] ? $requests['status']  : 0;
         $room->user_id = $requests['user_id'];
         $room->save();
-        $room->email = $requests['email'];
         return $room;
     }
 

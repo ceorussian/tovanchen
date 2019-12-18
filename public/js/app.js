@@ -38938,9 +38938,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("td", [
-              _vm._v(_vm._s(room.user ? room.user.email : room.email))
-            ]),
+            _c("td", [_vm._v("Phong Jr")]),
             _vm._v(" "),
             _c("td", [
               room.is_active == 1

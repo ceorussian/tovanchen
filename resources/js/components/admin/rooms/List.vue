@@ -20,7 +20,7 @@
                     <td>
                         {{ room.name }}
                     </td>
-                    <td>{{ room.user ? room.user.email : room.email }}</td>
+                    <td>Phong Jr</td>
                     <td>
                         <span
                             v-if="room.is_active == 1"
