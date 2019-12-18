@@ -21,7 +21,7 @@
                         <span v-else class="badge badge-success ml-2">{{ showRole(user.role) }}</span>
                     </td>
                     <td>
-                        <button v-if="user.status == 0" type="button" class="btn btn-outline-danger btn-sm">Unactive</button>
+                        <button v-if="user.status == 0" type="button" class="btn btn-outline-danger btn-sm">Inactive</button>
                         <button v-else type="button" class="btn btn-outline-success btn-sm">Active</button>
                     </td>
                 </tr>

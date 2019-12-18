@@ -9,7 +9,7 @@ class UserProfile extends Model
     protected $table = 'user_profiles';
 
     public function user(){
-        return $this->belongsTo(USer::class);
+        return $this->belongsTo(User::class);
     }
     
     public static function updateUser($requests, $id){

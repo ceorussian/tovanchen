@@ -33,6 +33,16 @@ async function patch(url, data) {
   }
 }
 
+async function put(url, data) {
+  try {
+    const response = await axios.put(url, data);
+    return response.data;
+  } catch (e) {
+    showMessage(e);
+    throw e;
+  }
+}
+
 async function remove(url, data) {
   try {
     const response = await axios.delete(url, data);
@@ -75,4 +85,4 @@ async function sleep(time = 500) {
   });
 }
 
-export { get, post, patch, remove, sleep };
+export { get, post, patch, remove, sleep, put };

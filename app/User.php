@@ -21,8 +21,13 @@ class User extends Authenticatable
     public function user_profile(){
         return $this->hasOne(UserProfile::class);
     }
+
     public static function getAll(){
-        return self::with('user_profile')->orderBy('id', 'desc')->paginate(10);
+      return self::with('user_profile')->orderBy('id', 'desc')->paginate(10);
+    }
+
+    public function rooms(){
+        return $this->hasMany(Room::class);
     }
 
     public static function getUser($id){

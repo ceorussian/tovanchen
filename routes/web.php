@@ -18,4 +18,15 @@ Route::group(['middleware' => 'checkLogin'], function () {
 Route::get('login', 'AuthController@getLogin')->name('login');
 Route::post('login', 'AuthController@postLogin');
 Route::get('get-me', 'AuthController@getMe');
-Route::get('/{vue_capture?}', function () { return view('layouts.app'); })->where('vue_capture', '[\/\w\.-]*');
+
+Route::get('logout', function(){
+  \Illuminate\Support\Facades\Auth::logout();
+});
+
+Route::get('/{vue_capture?}', function () { 
+  if(!\Illuminate\Support\Facades\Auth::check()){
+    return redirect()->route('login');
+  }else{
+    return view('layouts.app');
+  }
+ })->where('vue_capture', '[\/\w\.-]*');

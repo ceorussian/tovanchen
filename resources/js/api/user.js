@@ -8,8 +8,14 @@ async function getDataUser() {
 async function getMe() {
     let auth = await get('/get-me');
     return auth.data;
+
+  }
+
+async function logout() {
+    await get('/logout');
   }
 export default {
   getDataUser,
-  getMe
+  getMe,
+  logout
 };
